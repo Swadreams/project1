@@ -1,0 +1,28 @@
+<p>This is the partial for view 1.</p>
+
+
+<!--<ul class="">
+<li ng-repeat="phone in phones">
+    <a href="#!/phones/{{phone.id}}">
+    <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+    </a>
+</li>
+</ul>-->
+
+
+
+
+  <div id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="slide in phones" active="slide.active">
+          <img ng-src="{{slide.imageUrl}}">
+          <div class="carousel-caption">
+            <h4>Slide {{$index+1}}</h4>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+  
+<!--demo taken from https://codepen.io/Fabiano/pen/LACzk -->
